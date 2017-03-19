@@ -65,8 +65,27 @@ const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick
     return 0;
   });
 
-  console.log(sortLastName)
 
 // 8. Reduce Exercise
 // Sum up the instances of each of these
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+
+var instance = data.reduce(function(obj, vehicle){
+  if (!obj[vehicle]){ 
+    obj[vehicle] = 0;
+  }
+  obj[vehicle]++
+  return obj;
+  
+}, {})
+
+console.log(instance);
+
+
+
+
+
+
+
+
+
